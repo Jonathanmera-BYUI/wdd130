@@ -1,69 +1,76 @@
-:root {
-  --primary-color: darkblue;
-  --text-light: white;
-  --border-color: #000;
-  --aside-bg: #f0f0f0;
-  --shadow-color: gray;
-}
-
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
-  background-color: var(--primary-color);
+  background-color: darkblue;
   padding: 10px;
 }
 
 nav a {
-  color: var(--text-light);
-  margin-right: 15px;
+  color: white;
+  display: block;
+  padding: 5px;
   text-decoration: none;
 }
 
 h1 {
-  color: var(--primary-color);
+  color: darkblue;
+  margin: 20px;
 }
 
+h2 {
+  margin-bottom: 10px; 
+}
+
+
+main {
+  max-width: 800px;
+  padding: 10px;
+  margin: 0px;
+}
+
+aside {
+  width: 300px;
+  margin: 20px;
+  padding: 15px;
+  background-color: #c8ad7f; 
+  text-align: center;
+}
+
+
 img {
-  border: 1px solid var(--border-color);
+  width: 200px;
+  height: auto;
+  border: 1px solid black;
   padding: 2px;
-  box-shadow: 0 0 30px var(--shadow-color);
+  box-shadow: 0 0 30px gray;
 }
 
 main img {
-  width: 150px;
+  float: right;
+  width: 120px; 
+  margin-left: 15px;
 }
 
 aside img {
   width: 100%;
+  margin-bottom: 10px;
 }
 
-main {
-  width: 60%;
-  float: left;
-  padding: 20px;
-}
 
-aside {
-  width: 30%;
-  float: right;
-  margin: 10px;
-  border: 1px solid var(--border-color);
+.box {
+  background-color: #c8ad7f;
   padding: 10px;
-  background-color: var(--aside-bg);
-  color: #333;
-}
-
-p {
-  padding: 0;
+  margin-top: 10px;
 }
 
 footer {
   clear: both;
-  margin-top: 15px;
-  border-top: 1px solid var(--border-color);
+  margin-top: 20px;
+  border-top: 1px solid black;
   text-align: center;
   padding: 10px;
 }

@@ -32,6 +32,10 @@ header {
   padding: 10px;
 }
 
+header img {
+  width: 80px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -60,29 +64,33 @@ nav, p, section, article {
 .hero img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
+  padding: 16px;
   text-align: center;
-  background-color: #264653;
+  background-color: var(--accent1-color);
   color: white;
+  opacity: 0.8;
 }
-
 
 .hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
   right: 20px;
-  background-color: #f4a261;
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .hero article img {
   float: right;
-  width: 120px;
+  width: 125px;
   margin-left: 10px;
 }
 
@@ -91,6 +99,7 @@ footer {
   margin-top: 20px;
 }
 
-.socialmedia a {
-  text-decoration: none;
+.socialmedia img {
+  width: 30px;
+  height: auto;
 }

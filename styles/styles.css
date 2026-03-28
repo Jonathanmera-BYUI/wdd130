@@ -4,9 +4,18 @@
   box-sizing: border-box;
 }
 
+header, .grid, footer {
+max-width: 840px;
+margin: 0 auto;
+
+
+}
 nav {
   background-color: darkblue;
   padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 nav a {
@@ -14,11 +23,13 @@ nav a {
   display: block;
   padding: 5px;
   text-decoration: none;
+  font-family: lato;
 }
 
 h1 {
   color: darkblue;
   margin: 20px;
+  border-bottom: 2px solid darkblue;
 }
 
 h2 {
@@ -27,9 +38,10 @@ h2 {
 
 
 main {
-  max-width: 800px;
+  max-width: 840px;
   padding: 10px;
   margin: 0px;
+  grid-column:2/3 ;
 }
 
 aside {
@@ -38,6 +50,8 @@ aside {
   padding: 15px;
   background-color: #c8ad7f; 
   text-align: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 
@@ -73,4 +87,10 @@ footer {
   border-top: 1px solid black;
   text-align: center;
   padding: 10px;
+}
+
+.grid {
+display: grid;
+grid-template-colums: 1fr 1fr;
+
 }

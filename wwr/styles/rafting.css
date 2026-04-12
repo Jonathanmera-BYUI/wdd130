@@ -15,7 +15,8 @@
 
 body {
   font-family: var(--body-font);
-  color: #222; /* melhor contraste */
+  color: #222;
+  background-color: #f4f4f4; /* melhora visual geral */
 }
 
 header, main, footer {
@@ -23,7 +24,6 @@ header, main, footer {
   margin: 0 auto;
 }
 
-/* HEADER */
 header {
   display: grid;
   grid-template-columns: 100px 1fr;
@@ -37,7 +37,6 @@ header img {
   width: 80px;
 }
 
-/* NAV */
 nav ul {
   list-style: none;
   display: flex;
@@ -50,7 +49,6 @@ nav a {
   text-decoration: none;
 }
 
-/* HEADINGS */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
@@ -61,26 +59,25 @@ h2 {
   margin: 20px 0;
 }
 
-/* GENERAL SPACING */
 nav, p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-/* HERO */
 .hero {
   position: relative;
 }
 
 .hero img {
-  display: block;
   width: 100%;
+  display: block;
 }
 
 .hero h1 {
   position: absolute;
-  top: 20px;
-  width: 100%;
+  top: 30px;
+  left: 20%;
+  right: 20%;
   padding: 16px;
   text-align: center;
   background-color: var(--accent1-color);
@@ -104,7 +101,6 @@ nav, p, section, article {
   margin-left: 10px;
 }
 
-/* FOOTER */
 footer {
   display: flex;
   justify-content: space-between;
@@ -117,7 +113,6 @@ footer {
   gap: 15px;
 }
 
-/* HISTORY */
 .history-content {
   display: grid;
   grid-template-columns: 1fr 200px 1fr;
@@ -130,19 +125,22 @@ footer {
   width: 100%;
 }
 
-/* ADVENTURE */
 .adventure-gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
-  flex-wrap: wrap;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
 }
 
 .adventure-gallery figure {
-  flex: 1;
   text-align: center;
 }
 
-/* FIGURE */
 figure {
   margin: 0;
 }
@@ -151,7 +149,6 @@ figcaption {
   font-size: 0.9rem;
 }
 
-/* COMPANY INFO */
 .company-info {
   text-align: center;
   margin: 25px 0;
@@ -162,39 +159,41 @@ figcaption {
   margin: 5px 0;
 }
 
-/* CONTACT LAYOUT */
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  gap: 30px;
   align-items: stretch;
-  min-height: 400px;
+  margin: 40px 0;
 }
 
-/* MAP */
+.contact-container h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
 .map {
+  width: 100%;
   height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 .map iframe {
   width: 100%;
   height: 100%;
+  min-height: 350px;
   border: none;
+  border-radius: 10px;
 }
 
-/* FORM */
 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background: #f9f9f9;
-  padding: 15px;
+  background: white;
+  padding: 20px;
   border-radius: 10px;
 }
 
-/* INPUTS */
 input, textarea {
   width: 100%;
   padding: 8px;
@@ -204,20 +203,17 @@ input, textarea {
   font-size: 1rem;
 }
 
-/* LABELS */
 label {
   display: block;
   font-weight: bold;
 }
 
-/* RADIO & CHECKBOX FIX */
 input[type="radio"],
 input[type="checkbox"] {
   width: auto;
   margin-right: 8px;
 }
 
-/* BUTTON */
 button {
   padding: 12px;
   background-color: var(--primary-color);
@@ -232,7 +228,6 @@ button:hover {
   background-color: var(--accent1-color);
 }
 
-/* EMPLOYEES */
 .employees {
   display: flex;
   justify-content: center;
@@ -241,13 +236,79 @@ button:hover {
   flex-wrap: wrap;
 }
 
-.employees figure {
-  text-align: center;
-}
-
 .employees img {
   width: 130px;
   height: 130px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+
+.cta-button {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: var(--secondary-color);
+  color: black;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.grid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-content div {
+  text-align: center;
+}
+
+.grid-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.newsletter {
+  text-align: center;
+}
+
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.trips-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.trips-grid div {
+  text-align: center;
+}
+
+.cta {
+  text-align: center;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
